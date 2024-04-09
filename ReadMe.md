@@ -88,6 +88,7 @@ Please upload your results to a publicly accessible Git repo. Free ones are prov
 
 ## Implementation
 -Modified controller endpoint paths to include employee or compensation.
+
 -Added Include(x => x.DirectReports) to return back the direct reports for get employee by id.
 ### Task 1
 - Added new ReportingStructure model that includes Employee model and Number of Reports
