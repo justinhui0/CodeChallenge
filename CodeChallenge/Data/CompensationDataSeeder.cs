@@ -11,7 +11,6 @@ namespace CodeChallenge.Data
     public class CompensationDataSeeder
     {
         private CompensationContext _compensationContext;
-        private const String EMPLOYEE_SEED_DATA_FILE = "resources/EmployeeSeedData.json";
 
         public CompensationDataSeeder(CompensationContext compensationContext)
         {
