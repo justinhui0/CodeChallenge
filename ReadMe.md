@@ -85,3 +85,17 @@ Compensation from the persistence layer.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
+
+##Implementation
+-Modified controller endpoint paths to include employee or compensation.
+-Added Include(x => x.DirectReports) to return back the direct reports for get employee by id.
+
+##Task 1
+- Added new ReportingStructure model that includes Employee model and Number of Reports
+- Added new RESTful endpoint to retreive the employee and total number of reports for that employee given an employee id
+- A private recursive method, GetTotalReports(string id) was used to calculate the total number of reports for an employee.
+
+##Task 2
+- Added new Compensation model that includes compensation id, employee model, salary and effectivedate
+- Added 2 new RESTful endpoints to create a new compensation given a compensation object and getCompensation by employeeid
+- Utilizing new db context, repository, service and controller for compensation endpoints. 
