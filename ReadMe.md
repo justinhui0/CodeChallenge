@@ -95,9 +95,25 @@ Please upload your results to a publicly accessible Git repo. Free ones are prov
 - Added new RESTful endpoint to retreive the employee and total number of reports for that employee given an employee id
 - A private recursive method, GetTotalReports(string id) was used to calculate the total number of reports for an employee.
 - Added test case for the new endpoint.
-
+- Call the new endpoint using: localhost:8080/api/employee/getReportingStructureById/{employeeID}
+  
 ### Task 2
 - Added new Compensation model that includes compensation id, employee model, salary and effectivedate
 - Added 2 new RESTful endpoints to create a new compensation given a compensation object and getCompensation by employeeid
 - Utilizing new db context, repository, service and controller for compensation endpoints. 
 - Added test case for the new create endpoint.
+- Call the create endpoint with: localhost:8080/api/compensation/CreateCompensation and include the new compensation in the request body, sample below
+```json
+{
+    "Employee": {
+        "employeeId": "c0c2293d-16bd-4603-8e08-638a9d18b22c",
+        "firstName": "George",
+        "lastName": "Harrison",
+        "position": "Developer III",
+        "department": "Engineering"
+    },
+    "Salary": 12,
+    "EffectiveDate": "2019-07-04T13:33:03.969Z"
+}
+```
+-Call the new get compensation endpoint using: localhost:8080/api/compensation/getCompensationById/{employeeId}
